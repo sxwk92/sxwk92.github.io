@@ -1,0 +1,561 @@
+/*css 初始化 */
+html,body,ul,li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin:0;
+    padding:0;
+}
+fieldset, img,input,button {
+    border:none;
+    padding:0;
+    margin:0;
+    outline-style:none;
+}
+ul, ol {
+    list-style:none;
+}
+input {
+    padding-top:0;
+    padding-bottom:0;
+    font-family: "SimSun","宋体";
+}
+select, input {
+    vertical-align:middle;
+}
+select, input, textarea {
+    font-size:12px;
+    margin:0;
+}
+textarea {
+    resize:none;
+}
+img {
+    border:0;
+    vertical-align:middle;
+}
+table {
+    border-collapse:collapse;
+}
+body {
+    font:12px/150% Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff;
+    overflow-x: hidden;
+}
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a{
+    color:#666;
+    text-decoration:none;
+}
+a:hover{
+    color:#C81623;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-decoration:none;
+    font-weight:normal;
+}
+s,i,em{
+    font-style:normal;
+    text-decoration:none;
+}
+.col-red{
+    color: #C81623!important;
+}
+
+/*公共类*/
+.w{
+    width: 1320px;
+    margin:0 auto;
+}
+.fl {
+    float:left
+}
+.fr {
+    float:right
+}
+.al {
+    text-align:left
+}
+.ac {
+    text-align:center
+}
+.ar {
+    text-align:right
+}
+.hide {
+    display:none
+}
+
+
+
+/* the class that fix the header*/
+.fixedheader {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index:1
+}
+/*when register*/
+#mask {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background:rgba(0,0,0,0.5);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 999;
+}
+
+#box {
+    display: none;
+    height:120px;
+    width:400px;
+    padding-right: 32px;
+    position: fixed;
+    top:34%;
+    left:33%;
+    font-weight: 300;
+    margin:80px auto;
+    color:#a8a7a8;
+    z-index:1000;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.8);
+    vertical-align: baseline;
+}
+
+#close_all {
+    font-size:23px;
+    font-weight: 700;
+    position: absolute;
+    top:0;
+    right:0px;
+    cursor: pointer;
+}
+
+#box div {
+    margin:0 0 10px;
+}
+
+/*下拉页面后的导航栏*/
+.rn_header {
+    height:50px;
+    line-height: 50px;
+    background-color: #000000;
+}
+
+/*search on the header start*/
+.search_on_header {
+    width:320px;
+    height: 46px;
+    float: left;
+    padding-bottom: 4px;
+    padding-left:15px;
+    margin-right: 15px;
+}
+.form_header {
+    position: relative;
+    width:320px;
+}
+.bar {
+    background-color: #000000;
+}
+
+.search_on_header input {
+    border:none;
+    outline:none;
+    width: 100%;
+    height:40px;
+    background: #444444;
+    padding-left:13px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search_on_header button {
+    height: 40px;
+    width: 54px;
+    border-radius:0 5px 5px 0;
+    position:absolute;
+    top:6px;
+    right:-16px;
+    background: #444444;
+    cursor: pointer;
+}
+
+.search_on_header button:before {
+    content:"search";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color:#F9F0DA;
+}
+
+
+/*search on the header ends*/
+
+.title {
+    width:146px;
+    height:50px;
+    float:left;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+    padding-left:225px;
+    color: #ffffff;
+}
+
+.nav {
+    float:right;
+}
+
+.nav ul li {
+    float:left;
+    font-size:15px;
+    padding:0 15px;
+    font-style: italic;
+}
+
+/*the register style start*/
+.login input:focus,.login input:focus {
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    outline: 0;
+}
+
+.login label,.password label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    float:left;
+    width:100px;
+    font-weight: 300;
+    line-height: 40px;
+    padding-right:10px;
+    font-weight:100;
+    text-align: right;
+    letter-spacing: 1px;
+    font-size:15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.login input,.password input {
+    padding: 0 10px;
+    width: 300px;
+    height: 40px;
+    color: #bbb;
+    text-shadow: 1px 1px 1px black;
+    background: rgba(0,0,0,.16);
+    border-radius: 5px;
+    border:0;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+    font-weight: 300;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.login_submit {
+    position:absolute;
+    top:30px;
+    right:0;
+    width:48px;
+    height:48px;
+    padding:8px;
+    border-radius: 32px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 4px rgba(0,0,0,0.35);
+}
+
+.login_submit:before {
+    top:28px;
+    left:-4px;
+    width:4px;
+    height:10px;
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.login_submit:before,.login_submit:after {
+    content:'';
+    z-index: 1;
+    position: absolute;
+}
+
+.login_button {
+    position: relative;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    padding: 0 0 48px;
+    /* Fix wrong positioning in Firefox 9 & older (bug 450418) */
+    text-indent: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: none;
+    border: 0;
+    border-radius: 24px;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.login_button:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background: #00a2d3;
+    border-radius: 24px;
+    background-image: -webkit-linear-gradient(top, #00a2d3, #0d7796);
+    background-image: -moz-linear-gradient(top, #00a2d3, #0d7796);
+    background-image: -o-linear-gradient(top, #00a2d3, #0d7796);
+    background-image: linear-gradient(to bottom, #00a2d3, #0d7796);
+    -webkit-box-shadow: inset 0 0 0 1px #00a2d3, 0 0 0 5px rgba(0, 0, 0, 0.16);
+    box-shadow: inset 0 0 0 1px #00a2d3, 0 0 0 5px rgba(0, 0, 0, 0.16);
+}
+.login-button:active:before {
+    background: #0591ba;
+    background-image: -webkit-linear-gradient(top, #0591ba, #00a2d3);
+    background-image: -moz-linear-gradient(top, #0591ba, #00a2d3);
+    background-image: -o-linear-gradient(top, #0591ba, #00a2d3);
+    background-image: linear-gradient(to bottom, #0591ba, #00a2d3);
+}
+.login_button:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 25px;
+    height: 19px;
+    background: url(../images/arrow.png) 0 0 no-repeat;
+}
+
+.login_submit:after {
+    top:-4px;
+    bottom:-4px;
+    right:-4px;
+    width:36px;
+}
+
+.forget_password {
+    padding-left:160px;
+    font-weight:100;
+    font-size:13px;
+    letter-spacing: 1px;
+}
+
+.forget_password a {
+    color:red;
+    text-decoration: none;
+}
+
+
+/*main start*/
+.background {
+    height: 650px;
+    overflow:hidden;
+}
+
+#para1 {
+    position:absolute;
+    top:216px;
+    left:40px;
+    font-size:16px;
+    color:#c42f2f;
+    font-weight:600;
+    line-height: 28px;
+}
+
+#para2 {
+    position: absolute;
+    top:400px;
+    left:30px;
+    font-size:18px;
+    font-family: cursive;
+    line-height:28px;
+    color:#11002D;
+    font-weight: 400;
+}
+.search {
+    position:absolute;
+    left:450px;
+    top:-32px;
+    z-index: 40;
+}
+
+/* Form wrapper styling */
+.form-wrapper {
+    width: 450px;
+    padding: 15px;
+    margin: 150px auto 50px auto;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+
+/* Form text input */
+.form-wrapper input {
+    width: 330px;
+    height: 20px;
+    padding: 10px 5px;
+    float: left;
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+}
+.form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+.form-wrapper input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+/* Form submit button */
+.form-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #d83c3c;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+.form-wrapper button:hover{
+    background: #e54040;
+}
+.form-wrapper button:active,
+.form-wrapper button:focus{
+    background: #c42f2f;
+    outline: 0;
+}
+.form-wrapper button:before { /* left arrow */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #d83c3c transparent;
+    top: 12px;
+    left: -6px;
+}
+.form-wrapper button:hover:before{
+    border-right-color: #e54040;
+}
+.form-wrapper button:focus:before, .form-wrapper button:active:before{
+    border-right-color: #c42f2f;
+}
+.form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+}
+
+
+.key_word {
+    position: absolute;
+    top:245px;
+    left:0;
+    color:blue;
+}
+.key_word h2 {
+    padding-left:180px;
+    margin-bottom: 10px;
+}
+
+.key_word_main li {
+    float: left;
+}
+
+.word h1 {
+    color:black;
+    line-height:28px;
+}
+.main_banner {
+    width: 100%;
+    height: 90px;
+    background-color: #11002D;
+    margin:0 0 10px 0;
+}
+
+.photo_wall article {
+    float:left;
+    margin:5px 5px 5px 0;
+}
+.ao-logo {
+    width:100%;
+    height:90px;
+    background-color: #0590D5;
+    margin:10px 0 20px 0;
+}
+
+#AO_exp {
+    width: 1150px;
+    height: 450px;
+    margin:50px auto;
+    border:1px solid red;
+    overflow: hidden;
+}
+#AO_exp ul li {
+    width: 240px;
+    height: 450px;
+    float: left;
+}
+.AO_exp ul {
+    width: 1300px;
+}
+
+
+.footer {
+    background-color: #000000;
+    width:100%;
+    height:60px;
+}
+
+
+
+
+
+
+
+
+

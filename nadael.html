@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>拉法纳达尔个人网站</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="jquery-1.11.1.js"></script>
+
+    <!--[if It IE9]-->
+    <script src="html5shiv.js"></script>
+    <!--![endif] -->
+    <script src="animate.js"></script>
+    <script>
+        window.onload=function(){
+            var header=$(".header");
+            var win=$(window);
+            var sc=$(document);
+            win.scroll(function(){
+                    if(sc.scrollTop()>=40){
+                        header.addClass("fixedheader");
+                        $(".header").fadeIn();
+                    }else{
+                        header.removeClass("fixedheader");
+                        $(".header").fadeOut();
+                    }
+                    }
+            )
+        }
+
+    </script>
+</head>
+
+
+
+<body>
+    <div id="mask"></div>
+    <div id="box">
+        <span id="close_all">×</span>
+        <div class="login">
+            <label for="login">Email</label>
+            <input type="text" name="login" id="login"/>
+        </div>
+        <div class="password">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password"/>
+        </div>
+        <div class="login_submit">
+            <button type="submit" class="login_button">Login</button>
+        </div>
+        <p class="forget_password"><a href="index">Forgot your password?</a></p>
+    </div>
+
+    <!--header start-->
+    <header class="rn_header">
+        <!--search on the header starts-->
+        <div class="search_on_header bar">
+            <form class="clearfix form_header">
+                <input type="text" placeholder="Search here……" required />
+                <button type="submit" id="btn"></button>
+            </form>
+        </div>
+        <!-- search on the header ends-->
+        <div class="title">
+            <h1>Rafael Nadal</h1>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#" target="_blank">Academy</a></li>
+                <li><a href="#" target="_blank">honor</a>
+
+                    <select name="" id="select">
+                        <option value="1">Grand Slam</option>
+                        <option value="2">Master 1000</option>
+                        <option value="3">ATP 500</option>
+                        <option value="4">ATP 250</option>
+                        <option value="5">Olympic</option>
+                        <option value="6">Davis Cup</option>
+                    </select>
+                </li>
+                <script type="text/javascript">
+                    window.onload=function(){
+                        var pic=document.getElementById("pic");
+                        var sele=document.getElementById("select");
+                        sele.onchange=function(){
+                            switch(this.value){
+                                case "1":
+                                    pic.src="images/14ao.jpg";
+
+                                    break;
+                                case "2":
+                                    pic.src="images/14fo.jpg";
+                                    break;
+                                case "3":
+                                    pic.src="images/10final.jpg";
+                                    break;
+                                case "4":
+                                    pic.src="images/12iw.jpg";
+                                    break;
+                                case "5":
+                                    pic.src="images/medal2.jpg";
+                                    break;
+                                case "6":
+                                    pic.src="images/medal.jpg";
+                                    break;
+
+                            }
+                        }
+                    }
+                </script>
+                <li><a href="#">Address</a></li>
+                <li><a href="#" id="reg">register</a></li>
+            </ul>
+
+            <script>
+                var box=document.getElementById("box");
+                var mask=document.getElementById("mask");
+                var reg=document.getElementById("reg");
+                var close_all=document.getElementById("close_all")
+
+                    reg.onclick=function() {
+                        box.style.display = "block";
+                        mask.style.display = "block";
+                    }
+                    close_all.onclick= function () {
+                        box.style.display="none";
+                        mask.style.display="none";
+                    }
+            </script>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <!--background insert-->
+        <div class="background">
+            <img id="pic" src="images/background.jpg" width="1366" alt=""/>
+        </div>
+
+        <div class="pr">
+            <p id=""></p>
+            <p id="para1">Since 2005,rafael nadal has won 14 Grand Slam titles,<br/>inclueding 1 Australian Open, <br/>2 Wimbledon Champions,<br/>2 US Open
+                <br/> and 9 champions in Roland Garros</p>
+            <p id="para2">Rafa also has 30 ATP master 1000 titles,tied with Djokovic,ranking first in history</p>
+            <p id="para3"></p>
+            <p id="para4"></p>
+            <p id="para5"></p>
+            <p id="para6"></p>
+        </div>3
+
+        <!--the main search-->
+        <div class="search">
+            <form class="form-wrapper clearfix">
+                <input type="text" placeholder="Search here..." required>
+                <button type="submit">Search</button>
+            </form>
+            <div class="key_word">
+                <h2>Keyword</h2>
+
+                <div class="key_word_main">
+                    <ul>
+                        <li><a href="#" >French Open</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li><a href="#">Roland Garros</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li><a href="#">The US Open</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li><a href="#">MUTUA Madrid Open</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li><a href="#">Sony Open</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <!-- search ends-->
+
+
+        <!-- -->
+        <div class="w clearfix">
+            <div class="word fl">
+                <h1>Heart Of Champion</h1>
+                <h1>Never Back Down</h1>
+                <h3>Sometimes you must hurt in order to know</h3>
+                <h3>Fall in order to grow</h3>
+                <h3>Lose in order to gain</h3>
+                <h3>Because life's greatest lessons</h3>
+                <h3>Are learnt though pain</h3>
+            </div>
+            <div class="ox-logo fr">
+                <img src="images/flag.jpg" width="150" alt=""/>
+                <img src="images/logo.png" width="150" alt=""/>
+            </div>
+        </div>
+
+        <div class="great">
+            <div class="main_banner">
+                <img src="images/ATP.jpg" width="90" alt=""/>
+                <img src="images/ATP.jpg" width="90" alt=""/>
+                <img src="images/ATP.jpg" width="90" alt=""/>
+                <img src="images/ATP.jpg" width="90" alt=""/>
+                <img src="images/ATP.jpg" width="90" alt=""/>
+                <img src="images/ATP.jpg" width="90" alt=""/>
+                <img src="images/ATP.jpg" width="90" alt=""/>
+            </div>
+            <div class="photo_wall w clearfix">
+                <article class="photo_1"><a href="a" target="_blank"><img src="images/photo1.jpg" width="448" height="288" alt=""/></a></article>
+                <article class="photo_2"><a href="a" target="_blank"><img src="images/photo2.jpg" width="423" height="288" alt=""/></a></article>
+                <article class="photo_3"><a href="a" target="_blank"><img src="images/photo3.jpg" width="428" height="288" alt=""/></a></article>
+                <article class="photo_4"><a href="a" target="_blank"><img src="images/photo4.jpg" width="433" height="288" alt=""/></a></article>
+                <article class="photo_5"><a href="a" target="_blank"><img src="images/photo5.jpg" width="433" height="288" alt=""/></a></article>
+                <article class="photo_6"><a href="a" target="_blank"><img src="images/photo6.jpg" width="433" height="288" alt=""/></a></article>
+            </div>
+        </div>
+
+        <div class="AO">
+            <div class="ao-logo">
+                <img src="images/aologo2.jpg" height="90" alt=""/>
+            </div>
+            <div class="w" id="AO_exp">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <script>
+                var box2=document.getElementById("AO_exp");
+                var lis=document.getElementById("AO_exp").getElementsByTagName("li");
+                for(var i=0;i<lis.length;i++){
+                    lis[i].style.backgroundImage="url(images/"+(i+1)+"ao.jpg)"
+                    lis[i].onmouseout=function(){
+                        for(var i=0;i<lis.length;i++){
+                            animate(lis[i],{width:100});
+                        }
+                        animate(this,{width:800});
+                    }
+                    lis[i].onmouseover=function(){
+                        for(var i=0;i<lis.length;i++){
+                            animate(lis[i],{width:240});
+                        }
+                    }
+                }
+            </script>
+        </div>
+
+        <div class=""></div>
+
+
+    </main>
+    <footer class="footer">
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
